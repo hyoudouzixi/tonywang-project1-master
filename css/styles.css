@@ -1,0 +1,49 @@
+ /*Css syntax for a class*/
+ .relative{
+     position: relative;
+     width: 1300px;
+     height: 1300px;
+     padding: 5px;
+     margin-bottom: 12px;
+     border: 2px solid #000;
+ }
+ .absolute{
+     /*position: static; 
+     position: relative; 
+     position: fixed;*/
+     position:absolute;
+     top: 80px;
+     right: 0;
+     width: 400px;
+     height: 100px;
+     /*padding-left: 12px;
+     padding-top: 12px;*/
+     padding: 12px 2px 2px 12px;
+     border: 2px solid #000; 
+     /*bottom: 0;
+     right: 0;
+     width: 300px;
+     left: 30px;*/
+ }
+
+ .sticky{
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid green;
+    background-color: greenyellow;
+ }
+ /*Css syntax for a id*/
+ #secondPara{
+
+ }
+body {
+    background-color: powderblue;
+  }
+  h1 {
+    color: blue;
+  }
+  p {
+    color: red;
+  }

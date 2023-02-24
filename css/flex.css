@@ -1,0 +1,17 @@
+.flex-container {
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    background-color: aqua;
+}
+
+.flex-container > div {
+    background-color: lightgrey;
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+    line-height: 75px;
+    font-size: 30p;
+}
