@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 
 .mainclass{
     z-index: 991;
@@ -46,12 +48,23 @@
   display: block;
 }
 
-
-
 body{ 
   background: black;
 }
 
+a{
+  height: 100px;
+  width: 200px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(124, 124, 124, 0.5);
+  -webkit-text-stroke: 2px white;
+  font-family: 'Russo One', sans-serif;;
+}
 
 
 
@@ -187,15 +200,11 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 180px;
-  color: transparent;
-  -webkit-text-stroke: 5px white;
-  font-family: 'Fira Mono', monospace;
 }
 
 .cube .face:nth-child(1) {
   transform: translateZ(300px);
-  background-color: rgb(238, 141, 14, 0.5);
+  background-color: rgb(95, 158, 160, 0.5);
 }
 
 .cube .face:nth-child(2) {
@@ -207,23 +216,81 @@ body{
 .cube .face:nth-child(3) {
   transform-origin: center center;
   transform: rotateY(180deg);
-  background-color: rgb(225, 127, 80, 0.5);
+  background-color: rgb(95, 158, 160, 0.5);
 }
 
 .cube .face:nth-child(4) {
   transform-origin: center left;
   transform: rotateY(-90deg);
-  background-color: rgb(0. 100, 0, 0.5);
+  background-color: rgb(95, 158, 160, 0.5);
 }
 
 .cube .face:nth-child(5) {
   transform-origin: top center;
   transform: rotateX(90deg);
-  background-color: rgb(130, 0, 0, 0.5);
+  background-color: rgb(95, 158, 160, 0.5);
 }
 
 .cube .face:nth-child(6) {
   transform-origin: bottom center;
   transform: rotateX(-90deg);
-  background-color: rgb(30, 143, 255, 0.5);
+  background-color: rgb(95, 158, 160, 0.5);
 }
+
+.cube .face .text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(124, 124, 124, 0.5);
+  -webkit-text-stroke: 2px white;
+  font-family: 'Russo One', sans-serif;;
+}
+
+.cube .face .text:hover{
+  animation: glitch 1s linear infinite;
+}
+
+.cube .face .text:before,
+.cube .face .text:after{
+  position: absolute;
+  left: 0;
+}
+
+.cube .face .text:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(10px,-10px);
+  }
+  4%,60%{
+    transform: translate(-10px,10px);
+  }
+  62%{
+    transform: translate(26px,-5px) skew(-26deg); 
+  }
+}
+
+.cube .face .text:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-10px,0);
+  }
+  4%,60%{
+    transform: translate(-10px,0);
+  }
+  62%{
+    transform: translate(-44px,10px) skew(42deg); 
+  }
+}
+

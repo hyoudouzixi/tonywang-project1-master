@@ -81,10 +81,20 @@ function rotateCube(e) {
 
   x = x * q * 2.25;
   y = -y * q * 2.25;
-
+  
   for(i = 0; i < cube.length; i++) {
     cube[i].style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";
   }
 
 }
+
+const displayTime = document.querySelector(".time");
+// Time
+function showTime() {
+  let time = new Date();
+  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  setTimeout(showTime, 1000);
+}
+
+showTime();
 
