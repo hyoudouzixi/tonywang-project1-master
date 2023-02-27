@@ -4,6 +4,7 @@ var horizontalRec = document.getElementsByClassName('flash-rectangle-horizontal'
 
 // get window width and height
 var winHeight = window.innerHeight;
+var winWidth = window.innerWidth;
 
 for ( var i=0; i < leftRec.length; i++ ) {
  	
@@ -47,7 +48,7 @@ for ( var i=0; i < horizontalRec.length; i++ ) {
   randomTop = getRandomNumber(80, winHeight);
   randomLeft = getRandomNumber(100, 200);
   randomRight = getRandomNumber(100, 200);
-  randomWidth = getRandomNumber(100, 400)
+  randomWidth = getRandomNumber(100, winWidth/2);
   random = getRandomNumber(0,0.2);
   
   // update top and right position
